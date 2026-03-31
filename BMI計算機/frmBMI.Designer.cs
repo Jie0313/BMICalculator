@@ -39,6 +39,7 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.lblBMI = new System.Windows.Forms.Label();
             this.lblAdvice = new System.Windows.Forms.Label();
+            this.lblIdealWeight = new System.Windows.Forms.Label();
             this.grpInput.SuspendLayout();
             this.grpOutput.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.grpInput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grpInput.Location = new System.Drawing.Point(12, 12);
             this.grpInput.Name = "grpInput";
-            this.grpInput.Size = new System.Drawing.Size(347, 168);
+            this.grpInput.Size = new System.Drawing.Size(395, 131);
             this.grpInput.TabIndex = 0;
             this.grpInput.TabStop = false;
             this.grpInput.Text = "輸入";
@@ -62,7 +63,7 @@
             // 
             this.btnRun.BackColor = System.Drawing.SystemColors.Control;
             this.btnRun.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRun.Location = new System.Drawing.Point(236, 45);
+            this.btnRun.Location = new System.Drawing.Point(265, 45);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(76, 61);
             this.btnRun.TabIndex = 4;
@@ -104,13 +105,14 @@
             // 
             // grpOutput
             // 
+            this.grpOutput.Controls.Add(this.lblIdealWeight);
             this.grpOutput.Controls.Add(this.lblAdvice);
             this.grpOutput.Controls.Add(this.lblResult);
             this.grpOutput.Controls.Add(this.lblBMI);
             this.grpOutput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grpOutput.Location = new System.Drawing.Point(12, 198);
+            this.grpOutput.Location = new System.Drawing.Point(12, 159);
             this.grpOutput.Name = "grpOutput";
-            this.grpOutput.Size = new System.Drawing.Size(347, 118);
+            this.grpOutput.Size = new System.Drawing.Size(395, 142);
             this.grpOutput.TabIndex = 1;
             this.grpOutput.TabStop = false;
             this.grpOutput.Text = "計算結果";
@@ -137,16 +139,24 @@
             // lblAdvice
             // 
             this.lblAdvice.AutoSize = true;
-            this.lblAdvice.Location = new System.Drawing.Point(6, 80);
+            this.lblAdvice.Location = new System.Drawing.Point(10, 105);
             this.lblAdvice.Name = "lblAdvice";
             this.lblAdvice.Size = new System.Drawing.Size(0, 18);
             this.lblAdvice.TabIndex = 2;
+            // 
+            // lblIdealWeight
+            // 
+            this.lblIdealWeight.AutoSize = true;
+            this.lblIdealWeight.Location = new System.Drawing.Point(6, 74);
+            this.lblIdealWeight.Name = "lblIdealWeight";
+            this.lblIdealWeight.Size = new System.Drawing.Size(0, 18);
+            this.lblIdealWeight.TabIndex = 3;
             // 
             // frmBMI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 328);
+            this.ClientSize = new System.Drawing.Size(419, 328);
             this.Controls.Add(this.grpOutput);
             this.Controls.Add(this.grpInput);
             this.Name = "frmBMI";
@@ -173,6 +183,7 @@
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label lblAdvice;
+        private System.Windows.Forms.Label lblIdealWeight;
     }
 }
 

@@ -97,7 +97,21 @@ namespace BMI計算機
             lblResult.BackColor = color;
             lblResult.ForeColor = Color.White;
 
-          
+            double minWeight = 18.5 * height * height;
+            double maxWeight = 24 * height * height;
+            lblIdealWeight.Text = $"理想體重：{minWeight:F1} ~ {maxWeight:F1} kg";
+            if (weight < minWeight)
+            {
+                lblIdealWeight.Text += $"（需增加 {minWeight - weight:F1} kg）";
+            }
+            else if (weight > maxWeight)
+            {
+                lblIdealWeight.Text += $"（需減少 {weight - maxWeight:F1} kg）";
+            }
+            else
+            {
+                lblIdealWeight.Text += "（已在理想範圍內）";
+            }
         }
     }
 }
