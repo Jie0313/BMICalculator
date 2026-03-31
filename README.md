@@ -20,7 +20,7 @@
 BMI = 體重 (kg) / 身高² (m²)
 
 ## 執行畫面
-![alt text](image-1.png)
+![alt text](image.png)
 
 ## 開發環境
 - C#
