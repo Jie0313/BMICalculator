@@ -59,11 +59,21 @@ namespace BMI計算機
             else if (bmi < 27)
             {
                 status = "過重";
+                color = Color.Gold;
+            }
+            else if (bmi < 30)
+            {
+                status = "輕度肥胖";
                 color = Color.Orange;
+            }
+            else if (bmi < 35)
+            {
+                status = "中度肥胖";
+                color = Color.OrangeRed;
             }
             else
             {
-                status = "肥胖";
+                status = "重度肥胖";
                 color = Color.Red;
             }
 
