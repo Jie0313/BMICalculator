@@ -44,8 +44,34 @@ namespace BMI計算機
             // 計算BMI
             double bmi = weight / (height * height);
 
+            string status;
+            Color color = Color.Black;
+            if (bmi < 18.5)
+            {
+                status = "過輕";
+                color = Color.Blue;
+            }
+            else if (bmi < 24)
+            {
+                status = "健康體位";
+                color = Color.Green;
+            }
+            else if (bmi < 27)
+            {
+                status = "過重";
+                color = Color.Orange;
+            }
+            else
+            {
+                status = "肥胖";
+                color = Color.Red;
+            }
+
+
             // 顯示結果
-            lblResult.Text = $"{bmi:F2}";
+            lblResult.Text = $"{bmi:F2} ({status})";
+            lblResult.BackColor = color;
+            lblResult.ForeColor = Color.White;
         }
     }
 }

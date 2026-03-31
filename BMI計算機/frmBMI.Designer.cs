@@ -30,14 +30,14 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.grpInput = new System.Windows.Forms.GroupBox();
-            this.grpOutput = new System.Windows.Forms.GroupBox();
-            this.lblHeight = new System.Windows.Forms.Label();
-            this.lblWeight = new System.Windows.Forms.Label();
-            this.lblBMI = new System.Windows.Forms.Label();
-            this.txtHeight = new System.Windows.Forms.TextBox();
-            this.txtWeight = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.lblWeight = new System.Windows.Forms.Label();
+            this.lblHeight = new System.Windows.Forms.Label();
+            this.grpOutput = new System.Windows.Forms.GroupBox();
             this.lblResult = new System.Windows.Forms.Label();
+            this.lblBMI = new System.Windows.Forms.Label();
             this.grpInput.SuspendLayout();
             this.grpOutput.SuspendLayout();
             this.SuspendLayout();
@@ -50,65 +50,12 @@
             this.grpInput.Controls.Add(this.lblWeight);
             this.grpInput.Controls.Add(this.lblHeight);
             this.grpInput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grpInput.Location = new System.Drawing.Point(22, 21);
+            this.grpInput.Location = new System.Drawing.Point(12, 12);
             this.grpInput.Name = "grpInput";
-            this.grpInput.Size = new System.Drawing.Size(329, 156);
+            this.grpInput.Size = new System.Drawing.Size(347, 168);
             this.grpInput.TabIndex = 0;
             this.grpInput.TabStop = false;
             this.grpInput.Text = "輸入";
-            // 
-            // grpOutput
-            // 
-            this.grpOutput.Controls.Add(this.lblResult);
-            this.grpOutput.Controls.Add(this.lblBMI);
-            this.grpOutput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grpOutput.Location = new System.Drawing.Point(22, 202);
-            this.grpOutput.Name = "grpOutput";
-            this.grpOutput.Size = new System.Drawing.Size(329, 105);
-            this.grpOutput.TabIndex = 1;
-            this.grpOutput.TabStop = false;
-            this.grpOutput.Text = "計算結果";
-            // 
-            // lblHeight
-            // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Location = new System.Drawing.Point(10, 33);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(78, 22);
-            this.lblHeight.TabIndex = 0;
-            this.lblHeight.Text = "身高(cm)";
-            // 
-            // lblWeight
-            // 
-            this.lblWeight.AutoSize = true;
-            this.lblWeight.Location = new System.Drawing.Point(10, 88);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(74, 22);
-            this.lblWeight.TabIndex = 1;
-            this.lblWeight.Text = "體重(kg)";
-            // 
-            // lblBMI
-            // 
-            this.lblBMI.AutoSize = true;
-            this.lblBMI.Location = new System.Drawing.Point(10, 44);
-            this.lblBMI.Name = "lblBMI";
-            this.lblBMI.Size = new System.Drawing.Size(153, 22);
-            this.lblBMI.TabIndex = 0;
-            this.lblBMI.Text = "身體質量指數(BMI)";
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Location = new System.Drawing.Point(118, 30);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(100, 30);
-            this.txtHeight.TabIndex = 2;
-            // 
-            // txtWeight
-            // 
-            this.txtWeight.Location = new System.Drawing.Point(118, 85);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(100, 30);
-            this.txtWeight.TabIndex = 3;
             // 
             // btnRun
             // 
@@ -122,15 +69,68 @@
             this.btnRun.UseVisualStyleBackColor = false;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
+            // txtWeight
+            // 
+            this.txtWeight.Location = new System.Drawing.Point(118, 85);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(100, 26);
+            this.txtWeight.TabIndex = 3;
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Location = new System.Drawing.Point(118, 30);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(100, 26);
+            this.txtHeight.TabIndex = 2;
+            // 
+            // lblWeight
+            // 
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Location = new System.Drawing.Point(10, 88);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(60, 18);
+            this.lblWeight.TabIndex = 1;
+            this.lblWeight.Text = "體重(kg)";
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Location = new System.Drawing.Point(10, 33);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(64, 18);
+            this.lblHeight.TabIndex = 0;
+            this.lblHeight.Text = "身高(cm)";
+            // 
+            // grpOutput
+            // 
+            this.grpOutput.Controls.Add(this.lblResult);
+            this.grpOutput.Controls.Add(this.lblBMI);
+            this.grpOutput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.grpOutput.Location = new System.Drawing.Point(12, 198);
+            this.grpOutput.Name = "grpOutput";
+            this.grpOutput.Size = new System.Drawing.Size(347, 118);
+            this.grpOutput.TabIndex = 1;
+            this.grpOutput.TabStop = false;
+            this.grpOutput.Text = "計算結果";
+            // 
             // lblResult
             // 
             this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResult.Location = new System.Drawing.Point(184, 42);
+            this.lblResult.Location = new System.Drawing.Point(184, 44);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(128, 26);
+            this.lblResult.Size = new System.Drawing.Size(157, 26);
             this.lblResult.TabIndex = 1;
             this.lblResult.Text = "                             ";
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBMI
+            // 
+            this.lblBMI.AutoSize = true;
+            this.lblBMI.Location = new System.Drawing.Point(6, 44);
+            this.lblBMI.Name = "lblBMI";
+            this.lblBMI.Size = new System.Drawing.Size(127, 18);
+            this.lblBMI.TabIndex = 0;
+            this.lblBMI.Text = "身體質量指數(BMI)";
             // 
             // frmBMI
             // 
