@@ -38,6 +38,7 @@
             this.grpOutput = new System.Windows.Forms.GroupBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.lblBMI = new System.Windows.Forms.Label();
+            this.lblAdvice = new System.Windows.Forms.Label();
             this.grpInput.SuspendLayout();
             this.grpOutput.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // grpOutput
             // 
+            this.grpOutput.Controls.Add(this.lblAdvice);
             this.grpOutput.Controls.Add(this.lblResult);
             this.grpOutput.Controls.Add(this.lblBMI);
             this.grpOutput.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -116,7 +118,7 @@
             // lblResult
             // 
             this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblResult.Location = new System.Drawing.Point(184, 44);
+            this.lblResult.Location = new System.Drawing.Point(184, 34);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(157, 26);
             this.lblResult.TabIndex = 1;
@@ -126,11 +128,19 @@
             // lblBMI
             // 
             this.lblBMI.AutoSize = true;
-            this.lblBMI.Location = new System.Drawing.Point(6, 44);
+            this.lblBMI.Location = new System.Drawing.Point(6, 34);
             this.lblBMI.Name = "lblBMI";
             this.lblBMI.Size = new System.Drawing.Size(127, 18);
             this.lblBMI.TabIndex = 0;
             this.lblBMI.Text = "身體質量指數(BMI)";
+            // 
+            // lblAdvice
+            // 
+            this.lblAdvice.AutoSize = true;
+            this.lblAdvice.Location = new System.Drawing.Point(6, 80);
+            this.lblAdvice.Name = "lblAdvice";
+            this.lblAdvice.Size = new System.Drawing.Size(0, 18);
+            this.lblAdvice.TabIndex = 2;
             // 
             // frmBMI
             // 
@@ -162,6 +172,7 @@
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblAdvice;
     }
 }
 

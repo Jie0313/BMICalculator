@@ -45,43 +45,59 @@ namespace BMI計算機
             double bmi = weight / (height * height);
 
             string status;
+            string advice;
             Color color = Color.Black;
             if (bmi < 18.5)
             {
                 status = "過輕";
+                advice = "**建議增加營養攝取，適度增重**";
                 color = Color.Blue;
+                lblAdvice.ForeColor = Color.Blue;
             }
             else if (bmi < 24)
             {
                 status = "健康體位";
+                advice = "**體重正常，請維持良好生活習慣**";
                 color = Color.Green;
+                lblAdvice.ForeColor = Color.Green;
             }
             else if (bmi < 27)
             {
                 status = "過重";
+                advice = "**建議控制飲食並增加運動**";
                 color = Color.Gold;
+                lblAdvice.ForeColor = Color.Gold;
             }
             else if (bmi < 30)
             {
                 status = "輕度肥胖";
+                advice = "**建議減少高熱量食物並規律運動**";
                 color = Color.Orange;
+                lblAdvice.ForeColor = Color.Orange;
             }
             else if (bmi < 35)
             {
                 status = "中度肥胖";
+                advice = "**建議積極減重，並諮詢專業醫師**";
                 color = Color.OrangeRed;
+                lblAdvice.ForeColor = Color.OrangeRed;
             }
             else
             {
                 status = "重度肥胖";
+                advice = "**建議尋求醫療協助進行體重控制**";
                 color = Color.Red;
+                lblAdvice.ForeColor = Color.Red;
             }
 
 
             // 顯示結果
             lblResult.Text = $"{bmi:F2} ({status})";
+            lblAdvice.Text = advice;
             lblResult.BackColor = color;
             lblResult.ForeColor = Color.White;
+
+          
         }
     }
 }
