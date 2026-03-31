@@ -24,6 +24,21 @@ namespace BMI計算機
                 MessageBox.Show("請輸入身高體重");
                 return;
             }
+            if (!double.TryParse(txtHeight.Text, out double heightCm) || !double.TryParse(txtWeight.Text, out double weightKg))
+            {
+                MessageBox.Show("請輸入正確的數字");
+                return;
+            }
+            if (heightCm <= 0)
+            {
+                MessageBox.Show("身高必須大於 0");
+                return;
+            }
+            if (weightKg <= 0)
+            {
+                MessageBox.Show("體重必須大於 0");
+                return;
+            }
             double height = double.Parse(txtHeight.Text) / 100;
             double weight = double.Parse(txtWeight.Text);
             // 計算BMI
